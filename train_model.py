@@ -59,12 +59,12 @@ model = train_model(X_train, y_train) # your code here
 
 # save the model and the encoder
 model_path = os.path.join(project_path, "model", "model.pkl")
-#save_model(model, model_path)
-pickle.dump(model, open(model_path, 'wb'))
+save_model(model, model_path)
+#pickle.dump(model, open(model_path, 'wb'))
 
 encoder_path = os.path.join(project_path, "model", "encoder.pkl")
-#save_model(encoder, encoder_path)
-pickle.dump(model, open(encoder_path, 'wb'))
+save_model(encoder, encoder_path)
+#pickle.dump(model, open(encoder_path, 'wb'))
 
 # load the model
 model = load_model(
