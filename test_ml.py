@@ -13,12 +13,12 @@ def test_dataset_shape():
     # Testing for dataset size and type.
     """
     # Your code here
-    try:
-        df = pd.read_csv("data/census.csv")
-        print("Dataset file found.")
-        
-    except FileNotFoundError:
-        pytest.fail("Dataset file not found. Please verify the path.")
+    data_path = "data/census.csv"
+    assert os.path.exists(data_path), f"Dataset file not found at {data_path}"
+
+    df = pd.read_csv(data_path)
+    print("Dataset file found.")
+
     
     # Check if the DataFrame has rows
     assert df.shape[0] > 0, "Dataset should have more than 0 rows."
