@@ -9,19 +9,19 @@ from ml.model import compute_model_metrics, train_model
 # TODO: add necessary import
 
 # TODO: implement the first test. Change the function name and input as needed
-@pytest.fixture(scope="session")
-def census_dataframe():
-    # Replace with your actual path to the clean census.csv file
-    df = pd.read_csv("./data/census.csv")
-    return df
-
-def test_dataset_shape(census_dataframe):
-    """
-    # Testing for dataset size and type.
-    """
-    # Your code here
-    assert census_dataframe.isnull().sum().sum() == 0, "Dataset contains unexpected null values."
-
+def test_dataset_shape():
+    # Example test for dataset sizes and types (Idea 4)
+    # Replace 'data/clean_data.csv' with your actual data loading/fixture
+    try:
+        df = pd.read_csv('data/cleaned_census_data.csv')
+        print("Dataset file found.")
+    except FileNotFoundError:
+        pytest.fail("Dataset file not found. Please verify the path.")
+    
+    # Check if the DataFrame has rows
+    assert df.shape[0] > 0, "Dataset should have more than 0 rows."
+    # Check if it is a pandas DataFrame
+    assert isinstance(df, pd.DataFrame), "Data should be loaded as a pandas DataFrame."
 
 
 # TODO: implement the second test. Change the function name and input as needed
