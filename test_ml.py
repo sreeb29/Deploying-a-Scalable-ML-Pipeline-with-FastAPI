@@ -1,6 +1,7 @@
 import pytest
 import pandas as pd
 import numpy as np
+import os
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import fbeta_score
 from ml.model import compute_model_metrics, train_model
