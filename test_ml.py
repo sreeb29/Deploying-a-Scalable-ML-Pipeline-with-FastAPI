@@ -14,7 +14,7 @@ def test_dataset_shape():
     """
     # Your code here
     try:
-        df = pd.read_csv('data/cleaned_census_data.csv')
+        df = pd.read_csv('data/census.csv')
         print("Dataset file found.")
     except FileNotFoundError:
         pytest.fail("Dataset file not found. Please verify the path.")
