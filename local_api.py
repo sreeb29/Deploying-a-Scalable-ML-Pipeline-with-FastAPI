@@ -30,7 +30,7 @@ data = {
 }
 
 # TODO: send a POST using the data above
-r = requests.post("http://127.0.0.1:8000/", json=data)  # Your code here
+r = requests.post("https://ml-pipeline-sreeb-12960c14adb5.herokuapp.com/", json=data)  # Your code here
 
 # TODO: print the status code
 print("Status Code:", r.status_code)
