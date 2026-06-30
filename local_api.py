@@ -3,7 +3,7 @@ import json
 import requests
 
 # TODO: send a GET using the URL http://127.0.0.1:8000
-r = requests.get("http://127.0.0.1:8000/")  # Your code here
+r = requests.get("http://127.0.0.1:8000")  # Your code here
 
 # TODO: print the status code
 print(f"Status Code: {r.status_code}")
@@ -30,7 +30,7 @@ data = {
 }
 
 # TODO: send a POST using the data above
-post_r = requests.post("https://ml-pipeline-sreeb-12960c14adb5.herokuapp.com/", json=data)  # Your code here
+post_r = requests.post("https://127.0.0", json=data)  # Your code here
 
 # TODO: print the status code
 print(f"Status Code: {post_r.status_code}")
