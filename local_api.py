@@ -6,9 +6,9 @@ import requests
 r = requests.get("http://127.0.0.1:8000/")  # Your code here
 
 # TODO: print the status code
-print("Status Code:", r.status_code)
+print(f"Status Code: {r.status_code}")
 # TODO: print the welcome message
-print("Result:", r.json().get("message"))
+print(f"Result: {r.json().get('message')}")
 
 
 
@@ -30,9 +30,9 @@ data = {
 }
 
 # TODO: send a POST using the data above
-r = requests.post("https://ml-pipeline-sreeb-12960c14adb5.herokuapp.com/", json=data)  # Your code here
+post_r = requests.post("http://127.0.0.1:8000/", json=data)  # Your code here
 
 # TODO: print the status code
-print("Status Code:", r.status_code)
+print(f"Status Code: {post_r.status_code}")
 # TODO: print the result
-print("Result:", r.json().get("result"))
+print(f"Result: {post_r.json().get('result')}")
