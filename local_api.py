@@ -30,7 +30,7 @@ data = {
 }
 
 # TODO: send a POST using the data above
-post_r = requests.post("https://ml-pipeline-sreeb-12960c14adb5.herokuapp.com/predict/", json=data)  # Your code here
+post_r = requests.post("http://127.0.0.1:8000/predict/", json=data)  # Your code here
 
 # TODO: print the status code
 print(f"Status Code: {post_r.status_code}")
