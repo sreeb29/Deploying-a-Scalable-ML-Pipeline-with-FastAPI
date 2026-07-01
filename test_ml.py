@@ -6,9 +6,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import fbeta_score
 from ml.model import compute_model_metrics, train_model
 
-# TODO: add necessary import
+# add necessary import
 
-# TODO: implement the first test. Change the function name and input as needed
+# implement the first test. Change the function name and input as needed
 def test_dataset_shape():
     # Example test for dataset sizes and types (Idea 4)
     
@@ -23,11 +23,7 @@ def test_dataset_shape():
     # Check if it is a pandas DataFrame
     assert isinstance(df, pd.DataFrame), "Data should be loaded as a pandas DataFrame."
 
-    #Test column type: Target column must be integer
-    #assert np.issubdtype(df['salary'].dtype, np.float), "Target column must be an integer type."
-
-
-# TODO: implement the second test. Change the function name and input as needed
+# implement the second test. Change the function name and input as needed
 def test_ml_function_output_type():
     """
     # testing to verify ML function returns expected type on 'train_model' function in ml code that outputs a model.
@@ -44,7 +40,7 @@ def test_ml_function_output_type():
 
 
 
-# TODO: implement the third test. Change the function name and input as needed
+# implement the third test. Change the function name and input as needed
 def test_compute_model_metrics():
     """
     # testing to verify computing metrics returns the expected value.

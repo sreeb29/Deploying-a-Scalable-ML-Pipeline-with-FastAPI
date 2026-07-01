@@ -28,16 +28,16 @@ class Data(BaseModel):
     native_country: str = Field(..., example="United-States", alias="native-country")
 
 #file_dir = os.path.dirname(__file__)
-path = 'model/encoder.pkl'  # TODO: enter the path for the saved encoder 
+path = 'model/encoder.pkl'  # enter the path for the saved encoder 
 encoder = load_model(path)
 
-path = 'model/model.pkl'  # TODO: enter the path for the saved model 
+path = 'model/model.pkl'  # enter the path for the saved model 
 model = load_model(path)
 
-# TODO: create a RESTful API using FastAPI
+# create a RESTful API using FastAPI
 app = FastAPI() # your code here
 
-# TODO: create a GET on the root giving a welcome message
+# create a GET on the root giving a welcome message
 @app.get("/")
 async def get_root():
     """ Say hello!"""
@@ -45,7 +45,7 @@ async def get_root():
     return {"message":"Welcome to the Census Income Prediction API!"}
 
 
-# TODO: create a POST on a different path that does model inference
+# create a POST on a different path that does model inference
 @app.post("/predict/")
 async def post_inference(data: Data):
     # DO NOT MODIFY: turn the Pydantic model into a dict.

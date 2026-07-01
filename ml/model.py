@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 import logging
 
-# TODO: add necessary import
+# add necessary import
 
 # Optional: implement hyperparameter tuning.
 def train_model(X_train, y_train):
@@ -25,7 +25,7 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    # TODO: implement the function
+    # implement the function
     model = RandomForestClassifier()
     model.fit(X_train, y_train)
 
@@ -69,7 +69,7 @@ def inference(model, X):
     preds : np.array
         Predictions from the model.
     """
-    # TODO: implement the function
+    # implement the function
     preds = model.predict(X)
     return preds
 
@@ -84,12 +84,12 @@ def save_model(model, path):
     path : str
         Path to save pickle file.
     """
-    # TODO: implement the function
+    # implement the function
     joblib.dump(model, path)
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
-    # TODO: implement the function
+    # implement the function
     model = joblib.load(path) #pickle.load(open(path, 'rb')) #joblib.load(path)
     return model
 
@@ -130,7 +130,7 @@ def performance_on_categorical_slice(
     fbeta : float
 
     """
-    # TODO: implement the function
+    # implement the function
     X_slice, y_slice, _, _ = process_data(
         # your code here
         X = data[data[column_name] == slice_value], # for input data, use data in column given as "column_name", with the slice_value 
